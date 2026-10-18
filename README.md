@@ -5,3 +5,5 @@ I'll be tracking each day record to maintain consistency.
 15/10/26 - Understood token -> vector embedding formation both word encoding + positional encoding. 
 16/10/26 - Read the attention mechanism, not in detail but yeah build foundation. Sorry woke up late. Would take resposiblity from now. 
 17/10/26 - Complete self attention both simplified as well as complex one. 
+18/10/26 - Coded self attnetion, learn and added Causal Attention and dropouts
+
