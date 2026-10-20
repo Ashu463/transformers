@@ -7,3 +7,4 @@ I'll be tracking each day record to maintain consistency.
 17/10/26 - Complete self attention both simplified as well as complex one. 
 18/10/26 - Coded self attnetion, learn and added Causal Attention and dropouts
 19/10/26 - A small part of MHA, not coded it only read a fewer. 
+20/10/26 - Complete MHA along with code.
