@@ -8,3 +8,5 @@ I'll be tracking each day record to maintain consistency.
 18/10/26 - Coded self attnetion, learn and added Causal Attention and dropouts
 19/10/26 - A small part of MHA, not coded it only read a fewer. 
 20/10/26 - Complete MHA along with code.
+21/10/26 - Started chapter 4, building GPT from scratch
+
