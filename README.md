@@ -9,4 +9,5 @@ I'll be tracking each day record to maintain consistency.
 19/10/26 - A small part of MHA, not coded it only read a fewer. 
 20/10/26 - Complete MHA along with code.
 21/10/26 - Started chapter 4, building GPT from scratch
+22/10/26 - Completed code for dummyGPT, complete layernorm, and read activation functions ReLU and GELU. 
 
