@@ -71,21 +71,21 @@ batch_example = torch.randn(2, 5)
 layer = nn.Sequential(nn.Linear(5, 6), nn.ReLU())
 out = layer(batch_example)
 print(out)
-mean = out.mean(dim=-1, keepdim=True)
-var = out.var(dim=-1, keepdim=True)
-print("Mean:\n", mean)
-print("Variance:\n", var)
-
-out_norm = (out - mean) / torch.sqrt(var)
-mean = out_norm.mean(dim=-1, keepdim=True)
-var = out_norm.var(dim=-1, keepdim=True)
-print("Normalized layer outputs:\n", out_norm)
-print("Mean:\n", mean)
-print("Variance:\n", var)
-
-torch.set_printoptions(sci_mode=False)
-print("Mean:\n", mean)
-print("Variance:\n", var)
+# mean = out.mean(dim=-1, keepdim=True)
+# var = out.var(dim=-1, keepdim=True)
+# print("Mean:\n", mean)
+# print("Variance:\n", var)
+# 
+# out_norm = (out - mean) / torch.sqrt(var)
+# mean = out_norm.mean(dim=-1, keepdim=True)
+# var = out_norm.var(dim=-1, keepdim=True)
+# print("Normalized layer outputs:\n", out_norm)
+# print("Mean:\n", mean)
+# print("Variance:\n", var)
+# 
+# torch.set_printoptions(sci_mode=False)
+# print("Mean:\n", mean)
+# print("Variance:\n", var)
 
 class LayerNorm(nn.Module):
     def __init__(self, emb_dim):
@@ -108,4 +108,28 @@ print("Mean:\n", mean)
 print("Variance:\n", var)
 
 
+class GELU(nn.Module):
+    def __init__(self):
+        super().__init__()
+
+    def forward(self, x):
+        return 0.5 * x * (1 + torch.tanh(torch.sqrt(torch.tensor(2.0 / torch.pi) * (x + 0.44715 * torch.pow(x, 3)))))
+
+ 
+class FeedForward(nn.Module):
+    def __init__(self, cfg):
+        super().__init__()
+        self.layers = nn.Sequential(
+                nn.Linear(cfg["emb_dim"], 4 * cfg["emb_dim"]),
+                GELU(),
+                nn.Linear(4 * cfg["emb_dim"], cfg["emb_dim"])
+        )
+
+    def forward(self, x):
+        return self.layers(x)
+
+ffn = FeedForward(GPT_CONFIG_124M)
+x = torch.rand(2, 3, 768)
+out = ffn(x)
+print(out.shape)
 
