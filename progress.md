@@ -13,4 +13,5 @@
 - 22/10/26 - Completed code for dummyGPT, complete layernorm, and read activation functions ReLU and GELU. 
 - 23/10/26 - Completed transformer block and trying to start inference book but failed badly.
 - 24/10/26 - Null
-- 25/10/26 - Completed GPT model along with coding. Only one topic left in ch-04
+- 25/10/26 - Completed GPT model along with coding. Only one topic left in ch-04s
+- 26/10/26 - Very less, a slight illness caught me. Completed ch-04. Will start pre-training tmrw. 

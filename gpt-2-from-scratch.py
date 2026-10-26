@@ -198,4 +198,40 @@ print(out)
 total_params = sum(p.numel() for p in model.parameters())
 print("total parameters: \n", total_params)
 
-print(sum(p.numel() for p in model.out_head.parameters()))
+print("Actual trainable parameter:", total_params - sum(p.numel() for p in model.out_head.parameters()))
+
+total_size_bytes = total_params * 4
+total_size_mb = total_size_bytes / (1024 * 1024)
+print(f"Total size of the model: {total_size_mb:.2f} MB")
+
+   
+def generate_text_simple(model, idx, max_new_tokens, context_size):
+
+    for _ in range(max_new_tokens):
+        idx_cond = idx[:, -context_size:]
+        with torch.no_grad():
+            logits = model(idx_cond)
+
+        logits = logits[:, -1, :]
+        probabs = torch.softmax(logits, dim=-1)
+        idx_next = torch.argmax(probabs, dim=-1, keepdim=True)
+        idx = torch.cat((idx, idx_next), dim=1)
+
+    return idx
+
+
+start_context = "Hello, I am"
+encoded = tokenizer.encode(start_context)
+print("encoded:", encoded)
+encoded_tensor = torch.tensor(encoded).unsqueeze(0)
+print("encoded_tensor.shape", encoded_tensor.shape)
+model.eval()
+out = generate_text_simple(model, encoded_tensor, 6, GPT_CONFIG_124M["context_length"])
+print("Output:", out)
+print("Output Length:", len(out[0]))
+
+
+print(tokenizer.decode(out.squeeze(0).tolist()))
+
+
+
