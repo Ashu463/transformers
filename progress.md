@@ -20,3 +20,4 @@
 Honestly speaking inference is the devops of this AI world, if mastered then paid in a way more I can ever imagined. Secondly it's damn hard coz everything seems to be so random. Solution: If I've ever had to learn devops back in 2010s I would go deeper into systems and learn everything literally everything cloud, terraform, k8s, ansible, and all from scratch. The more I iterated on it, the more it cleared in my mind. 
 Exactly that's what I need to repeat: Learn faster, build a image -> a blurry image -> a slight clear -> crystal clear. Topics you see, resources are everywhere. This is bloddy deeper system which I ever wanted to go into. 
 Refactored my lens towards inference; will clear those buzzwords through those videos + reading the book slowly slowy. And I'll win the world.
+- 29/10/26 - Deep dive into training, specially neural networks training
