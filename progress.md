@@ -21,3 +21,4 @@ Honestly speaking inference is the devops of this AI world, if mastered then pai
 Exactly that's what I need to repeat: Learn faster, build a image -> a blurry image -> a slight clear -> crystal clear. Topics you see, resources are everywhere. This is bloddy deeper system which I ever wanted to go into. 
 Refactored my lens towards inference; will clear those buzzwords through those videos + reading the book slowly slowy. And I'll win the world.
 - 29/10/26 - Deep dive into training, specially neural networks training
+- 30/10/26 - Completed DL and training part, and started appendix. Giving way lesser time than I should. 

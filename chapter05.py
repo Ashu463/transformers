@@ -100,3 +100,15 @@ def calc_loss_loader(data_loader, model, device, num_batches=None):
             break
 
     return total_loss / num_batches
+
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model.to(device)
+with torch.no_grad():
+    train_loss = calc_loss_loader(train_loader, model, device)
+    val_loss = calc_loss_loader(val_loader, model, device)
+
+print("training loss:", train_loss)
+print("Val loss:", val_loss)
+import torch
+torch.__version__
