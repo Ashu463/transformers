@@ -6,6 +6,8 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "numpy>=2.5.4",
+    "tensorflow>=2.21.0",
     "tiktoken>=0.14.0",
     "torch>=2.14.1",
+    "tqdm>=4.70.1",
 ]

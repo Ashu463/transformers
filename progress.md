@@ -22,3 +22,17 @@ Exactly that's what I need to repeat: Learn faster, build a image -> a blurry im
 Refactored my lens towards inference; will clear those buzzwords through those videos + reading the book slowly slowy. And I'll win the world.
 - 29/10/26 - Deep dive into training, specially neural networks training
 - 30/10/26 - Completed DL and training part, and started appendix. Giving way lesser time than I should. 
+
+-----------------------------------------
+After a long break
+
+### Fine tuning started
+Idea fixed to fine tune LLMs specifically for agentic tasks. E.g. coding any application. And fine tune on this data. 
+
+- 12/11: Decided the idea, and framed next set of tasks i.e. 
+i) collect data through building and running agents 
+ii) turn it into labelled  one through claude
+iii) start with qwen3-4B on cloud. 
+
+More to come. 
+
